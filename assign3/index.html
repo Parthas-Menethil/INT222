@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizza Reservation</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mycss.css" type="text/css" media="screen" /> 
+	<script src="js/myscript.js"></script>
+</head>
+<body>
+	<header></header>
+	<!--<nav>
+		<ul>
+			<li><a href="http://xparthas.com">My website</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./gallery.html">Photo Gallery</a></li>
+			<li><a href="./video.html">Video</a></li>
+			<li><a href="./audio.html">Audio</a></li>
+			<li><a href="./html5.html">HTML5</a></li>
+			<li><a href="./forms.html">Forms</a></li>
+			<li><a href="./other.html">Other</a></li>
+			<li><a href="./css/">CSS Used</a></li>
+		</ul>
+	</nav>-->
+	<div class="container">
+		<form  method="post" 
+		  name="onlineOrder" id="onlineOrder"
+        	  action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/pizza.cgi" 
+		  onsubmit="return validateOrder();">
+		<div class="content pizTable">
+			<div class="pizLeft">
+				<h3>Mama's Pizza</h3>
+				<p class="contentBorder">416 or 905 <br /> 222-6262</p>
+				<div class="pizzaPrice">
+					<table>
+						<tr>
+							<th>Small</th>
+							<td>$11.55</td>
+						</tr>
+						<tr>
+							<th>Medium</th>
+							<td>$15.25</td>
+						</tr>
+						<tr>
+							<th>Large</th>
+							<td>$22.00</td>
+						</tr>
+						<tr>
+							<th>X-Large</th>
+							<td>$25.00</td>
+						</tr>
+						<tr>
+							<th colspan="2">Toppings</th>
+						</tr>
+						<tr>
+							<td>$1.79</td>
+							<td>Each</td>
+						</tr>
+						<tr>
+							<td colspan="2">Plus 13% HST</td>
+						</tr>
+						<tr>
+							<td colspan="2">Free Delivery</td>
+						</tr>
+						
+					</table>
+				</div>
+				<p class="contentBorder">Your Price<br /> <input type="text" name="price" id="price" maxlength="8" readonly="readonly" /></p>
+			</div>
+			<div class="pizMiddle contentBorder">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<table>
+						<tr>
+							<th>Name</th>
+							<td><input type="text" name="surname" id="surname" maxlength="15" /></td>
+						</tr>
+						<tr>
+							<th>Account No.</th>
+							<td><input type="text" name="client" id="client" maxlength="12" /></td>
+						</tr>
+						<tr>
+							<th>Phone No.</th>
+							<td><input type="tel" name="phone" id="phone" maxlength="12" /></td>
+						</tr>
+						<tr>
+							<th>Date of Birth</th>
+							<td><input type="text" name="dob" id="dob" maxlength="7" /></td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Pizza size & Crust</legend>
+					<table>
+						<tr>
+							<td>
+								<select name="pizzaSize" id="pizzaSize" size="2" onchange="calculatePizzaPrice();">
+									<option value="">Select Pizza Size</option>
+									<option value="Small">Small</option>
+									<option value="Medium">Medium</option>
+									<option value="Large">Large</option>
+									<option value="X-Large">X-Large</option>
+
+								</select>
+							</td>
+							<td>
+								<select name="pizzaCrust" id="pizzaCrust" size="2"> 
+									 <option value="Regular Crust">Regular Crust</option>
+									 <option value="Thin Crust">Thin Crust</option>
+									 <option value="Thick Crust">Thick Crust</option>
+									 <option value="Whole Wheat Crust">Whole Wheat Crust</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Cheese</legend>
+					<table>
+						<tr>
+							<td><input type="radio" name="cheese" id="c01" value="Mozzarella" />Mozzarella</td>
+							<td><input type="radio" name="cheese" id="c02" value="Reduced Fat" />Reduced Fat</td>
+							<td><input type="radio" name="cheese" id="c03" value="Feta" />Feta</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Sauces</legend>
+					<table>
+						<tr>
+							<td><input type="radio" name="sauce" id="s01" value="Pizza Sauce" />Pizza Sauce</td>
+							<td><input type="radio" name="sauce" id="s02" value="BBQ Sauce" />BBQ Sauce</td>
+							<td><input type="radio" name="sauce" id="s03" value="Garlic Sauce" />Garlic Sauce</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Special Instructions</legend>
+					<textarea name="note" id="note"></textarea>
+				</fieldset>
+
+
+			</div>
+			<div class="pizRight contentBorder">
+				<fieldset>
+					<legend>Choose Toppings - $1.79 Each</legend>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t01" value="Anchovies" onclick="calculatePizzaPrice();" />Anchovies</td>
+							<td><input type="checkbox" name="toppings" id="t02" value="Broccoli" onclick="calculatePizzaPrice();" />Broccoli</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t03" value="Bacon" onclick="calculatePizzaPrice();" />Bacon</td>
+							<td><input type="checkbox" name="toppings" id="t04" value="GreenOlives" onclick="calculatePizzaPrice();" />Green Olives</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t05" value="Ham" onclick="calculatePizzaPrice();" />Ham</td>
+							<td><input type="checkbox" name="toppings" id="t06" value="GreenPeppers" onclick="calculatePizzaPrice();" />Green Peppers</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t07" value="Pepperoni" onclick="calculatePizzaPrice();" />Pepperoni</td>
+							<td><input type="checkbox" name="toppings" id="t08" value="Mushrooms" onclick="calculatePizzaPrice();" />Mushrooms</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t09" value="Salami" onclick="calculatePizzaPrice();" />Salami</td>
+							<td><input type="checkbox" name="toppings" id="t010" value="RedOnions" onclick="calculatePizzaPrice();" />Red Onions</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="toppings" id="t11" value="Sausage" onclick="calculatePizzaPrice();" />Sausage</td>
+							<td><input type="checkbox" name="toppings" id="t12" value="RoastedGarlic" onclick="calculatePizzaPrice();" />Roasted Garlic</td>
+						</tr>
+					</table>
+				</fieldset>
+				<div class="pCenter">
+					<input type="submit" value="PLACE YOUR ORDER"/>	
+					<input type="reset" value="START OVER"/>
+				</div>
+				<div class="errors" id="errors"></div>
+			</div>
+		</div>
+		<input  name="hPizzaPrice"      value="0"          type="hidden" /> 
+		<input  name="hToppings"        value="0"          type="hidden" />
+		<input  name="hToppingsCost"    value="0"          type="hidden" />
+		<input  name="hSubTotal"        value="0"          type="hidden" />
+		<input  name="hHst"             value="0"          type="hidden" />
+		<input  name="hFinalTotal"      value="0"          type="hidden" />
+		<input  name="hJsActive"        value="N"          type="hidden" />
+		<input  name="hLogin"           value="mylogin"  type="hidden" /> 
+		<input  name="hName"            value="Parthas"   type="hidden" />
+		</form>
+	</div>
+		<footer>
+			<ul>
+				<li><a href="../">zenit Account</a></li>
+				<li><a href="honesty.html">Honesty</a></li>
+				<li>
+				<a>
+				<script type="text/javascript">
+				//<![CDATA[
+				  var dt=new Date(document.lastModified);   // Get document last modified date
+				  document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+				//]]>
+				</script>
+				</a>
+				</li>
+				<li><a href="css/">CSS</a></li>
+				<li><a href="js/">JavaScript</a></li>
+			</ul>
+		</footer>		
+</body>
+</html>

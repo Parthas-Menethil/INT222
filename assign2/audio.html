@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment #2</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mycss.css" type="text/css" media="screen" /> 
+</head>
+<body>
+	<header></header>
+	<nav>
+		<ul>
+			<li><a href="http://xparthas.com">My website</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./gallery.html">Photo Gallery</a></li>
+			<li><a href="./video.html">Video</a></li>
+			<li><a href="./audio.html">Audio</a></li>
+			<li><a href="./html5.html">HTML5</a></li>
+			<li><a href="./forms.html">Forms</a></li>
+			<li><a href="./other.html">Other</a></li>
+			<li><a href="./css/">CSS Used</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<section>
+			<h1><span class="pgHeader">Audio</span></h1>
+		</section>
+		<div class="content">
+			<div class="leftcontent">
+				<h3>Carrying You (Laputa)</h3>
+				<br />
+				<div class="pCenter">
+					<img src="./images/laputa.jpg" alt="Laputa">
+					<audio controls="controls" class="pCenter">
+						<source src="./misc/laputa.mp3" type="audio/mpeg" />
+						<source src="./misc/laputa.ogg" type="audio/ogg" />
+						Your browser does not support the audio tag.
+					</audio>
+				</div>
+				<div>
+					<p>
+						Carrying You (Laputa) is the theme song of a Japanese Film – Castle in the sky directed by Miyazaki Hayao. The film express us the collapse of an empire because of power of politics in a young boy's and a young girl's view. The composer of this song – Jou Hisaishi injected the soul of the film into this song. He let people to recall their past and added a little sense of mourn in the harmonic theme. Inside the rhythm, it expresses the memory of the past adventure and the praise of innocence. The whole music permitted with the longing of the future and to go forward.
+					</p>
+				</div>
+
+			</div>
+			<div class="rightcontent">
+				<aside class="pCenter">
+					<h3>Video Control Options</h3>
+					<br />
+					<script>
+						var audio = document.getElementsByTagName('audio')[0];
+					</script>
+					<input type="button" value="Play" onclick="audio.play();" />
+					<br />
+					<input type="button" value="Pause" onclick="audio.pause();" />
+					<br />
+					<input type="button" value="Volume On" onclick="audio.volume=1;" />
+					<br />
+					<input type="button" value="Volume Off" onclick="audio.volume=0;" />
+					<br />
+					<input type="button" value="Increase Volume" onclick="audio.volume+=0.1;" />
+					<br />
+					<input type="button" value="Decrease Volume" onclick="audio.volume-=0.1;" />
+					<br />
+				</aside>
+			</div>
+			
+		</div>
+	</div>
+    <footer>
+      <section>
+       <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+        </script>
+      </section>
+      <br /><br />
+    </footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment #2</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mycss.css" type="text/css" media="screen" /> 
+</head>
+<body>
+	<header></header>
+	<nav>
+		<ul>
+			<li><a href="http://xparthas.com">My website</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./gallery.html">Photo Gallery</a></li>
+			<li><a href="./video.html">Video</a></li>
+			<li><a href="./audio.html">Audio</a></li>
+			<li><a href="./html5.html">HTML5</a></li>
+			<li><a href="./forms.html">Forms</a></li>
+			<li><a href="./other.html">Other</a></li>
+			<li><a href="./css/">CSS Used</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<section>
+			<h1><span class="pgHeader">Forms - will be used in Assignment #3</span></h1>
+		</section>
+		<form method="post" name="pizOrder" action="./index.html">
+		<div class="content pizTable">
+			<div class="pizLeft">
+				<h3>Mama's Pizza</h3>
+				<p class="contentBorder">416 or 905 <br /> 222-6262</p>
+				<div class="pizzaPrice">
+					<table>
+						<tr>
+							<th>Small</th>
+							<td>$11.55</td>
+						</tr>
+						<tr>
+							<th>Medium</th>
+							<td>$15.25</td>
+						</tr>
+						<tr>
+							<th>Large</th>
+							<td>$22.00</td>
+						</tr>
+						<tr>
+							<th>X-Large</th>
+							<td>$25.00</td>
+						</tr>
+						<tr>
+							<th colspan="2">Toppings</th>
+						</tr>
+						<tr>
+							<td>$1.79</td>
+							<td>Each</td>
+						</tr>
+						<tr>
+							<td colspan="2">Plus 13% HST</td>
+						</tr>
+						<tr>
+							<td colspan="2">Free Delivery</td>
+						</tr>
+						
+					</table>
+				</div>
+				<p class="contentBorder">Your Price<br /> <input type="text" name="YourPrice" readonly="readonly" /></p>
+			</div>
+			<div class="pizMiddle contentBorder">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<table>
+						<tr>
+							<th>Name</th>
+							<td><input type="text" name="piName" id="piName" /></td>
+						</tr>
+						<tr>
+							<th>Account No.</th>
+							<td><input type="text" name="piAccount" id="piAccount" /></td>
+						</tr>
+						<tr>
+							<th>Phone No.</th>
+							<td><input type="tel" name="piPhone" id="piPhone" /></td>
+						</tr>
+						<tr>
+							<th>Date of Birth</th>
+							<td><input type="text" name="piDOB" id="piDOB" /></td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Pizza size & Crust</legend>
+					<table>
+						<tr>
+							<td>
+								<select name="pizSize" id="pizSize" size="2">
+									<option value="1">Select Pizza Size</option>
+									<option value="2">Small</option>
+									<option value="3">Medium</option>
+									<option value="4">Large</option>
+									<option value="5">X-Large</option>
+								</select>
+							</td>
+							<td>
+								<select name="pizCrust" id="pizCrust" size="2">
+									<option value="1">Regular Crust</option>
+									<option value="2">Thin Crust</option>
+									<option value="3">Thick Crust</option>
+									<option value="4">Whole Wheat Crust</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Cheese</legend>
+					<table>
+						<tr>
+							<td><input type="radio" name="pizCheese" id="pizCheese1" value="1" />Mozzarella</td>
+							<td><input type="radio" name="pizCheese" id="pizCheese2" value="2" />Reduced Fat</td>
+							<td><input type="radio" name="pizCheese" id="pizCheese3" value="3" />Feta</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Sauces</legend>
+					<table>
+						<tr>
+							<td><input type="radio" name="pizSauces" id="pizSauces1" value="1" />Pizza Sauce</td>
+							<td><input type="radio" name="pizSauces" id="pizSauces2" value="2" />BBQ Sauce</td>
+							<td><input type="radio" name="pizSauces" id="pizSauces3" value="3" />Garlic Sauce</td>
+						</tr>
+					</table>
+				</fieldset>
+
+
+			</div>
+			<div class="pizRight contentBorder">
+				<fieldset>
+					<legend>Special Instructions</legend>
+					<textarea name="pizSI" id="pizSI"></textarea>
+				</fieldset>
+				<fieldset>
+					<legend>Choose Toppings - $1.79 Each</legend>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping1" value="Anchovies" />Anchovies</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping2" value="Broccoli" />Broccoli</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping3" value="Bacon" />Bacon</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping4" value="GreenOlives" />Green Olives</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping5" value="Ham" />Ham</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping6" value="GreenPeppers" />Green Peppers</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping7" value="Pepperoni" />Pepperoni</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping8" value="Mushrooms" />Mushrooms</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping9" value="Salami" />Salami</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping10" value="RedOnions" />Red Onions</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping11" value="Sausage" />Sausage</td>
+							<td><input type="checkbox" name="pizTopping" id="pizTopping12" value="RoastedGarlic" />Roasted Garlic</td>
+						</tr>
+					</table>
+				</fieldset>
+				<div class="pCenter">
+					<input type="submit" value="PLACE YOUR ORDER"/>	
+					<input type="reset" value="START OVER"/>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+    <footer>
+      <section>
+       <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+        </script>
+      </section>
+      <br /><br />
+    </footer>
+</body>
+</html>

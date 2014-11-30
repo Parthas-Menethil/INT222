@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment #2</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mycss.css" type="text/css" media="screen" /> 
+</head>
+<body>
+	<header></header>
+	<nav>
+		<ul>
+			<li><a href="http://xparthas.com">My website</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./gallery.html">Photo Gallery</a></li>
+			<li><a href="./video.html">Video</a></li>
+			<li><a href="./audio.html">Audio</a></li>
+			<li><a href="./html5.html">HTML5</a></li>
+			<li><a href="./forms.html">Forms</a></li>
+			<li><a href="./other.html">Other</a></li>
+			<li><a href="./css/">CSS Used</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<section>
+			<h1><span class="pgHeader">Video</span></h1>
+		</section>
+		<div class="content">
+			<div class="leftcontent">
+				<h3>Guitar - A Cruel Angel's Thesis</h3>
+				<br />
+				<div class="disTable">
+					<div class="subContentL pCenter">
+						<video controls="controls">
+							<source src="./misc/evangelion.webm" type="video/webm" />
+							<source src='./misc/evangelion.mp4' type="video/mp4" />
+							<source src='./misc/evangelion.ogg' type="video/ogg" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="subContentR">
+						<p>
+							A Cruel Angel's Thesis is  a Japanese Animation - Neon Genesis Evangelion's theme song originally performed by singer Yoko Takahashi. The producer of the  Neon Genesis Evangelion expended much care and thought on this theme song. Every single tone and rhythm reflects the society of Japan in the 1990s. This guitar version of A Cruel Angel's Thesis is performed by Daisuke Minamizawa.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="rightcontent">
+				<aside class="pCenter">
+					<h3>Video Control Options</h3>
+					<br />
+					<script>
+						var video = document.getElementsByTagName('video')[0];
+					</script>
+					<input type="button" value="Play" onclick="video.play();" />
+					<br />
+					<input type="button" value="Pause" onclick="video.pause();" />
+					<br />
+					<input type="button" value="Restart" onclick="video.load();video.play();" />
+					<br />
+					<input type="button" value="Show Controls" onclick="video.load();video.controls=true;" />
+					<br />
+					<input type="button" value="Remove Controls" onclick="video.load();video.controls=false;" />
+					<br />
+				</aside>
+			</div>
+			
+		</div>
+	</div>
+    <footer>
+      <section>
+       <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+        </script>
+      </section>
+      <br /><br />
+    </footer>
+</body>
+</html>

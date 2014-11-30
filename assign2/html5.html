@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment #2</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mycss.css" type="text/css" media="screen" /> 
+</head>
+<body>
+	<header></header>
+	<nav>
+		<ul>
+			<li><a href="http://xparthas.com">My website</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./gallery.html">Photo Gallery</a></li>
+			<li><a href="./video.html">Video</a></li>
+			<li><a href="./audio.html">Audio</a></li>
+			<li><a href="./html5.html">HTML5</a></li>
+			<li><a href="./forms.html">Forms</a></li>
+			<li><a href="./other.html">Other</a></li>
+			<li><a href="./css/">CSS Used</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<section>
+			<h1><span class="pgHeader">HTML 5 New Features</span></h1>
+		</section>
+		<div class="content">
+			<div class="leftcontent">
+				<form method="post" name="pizOrder" action="./index.html">
+				<h3>How to focus on an entry</h3>
+				<input type="text" name="entry1" id="entry1" autofocus="autofocus" /> autofocus
+				<pre>&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;entry1&quot;&nbsp;id=&quot;entry1&quot;&nbsp;autofocus=&quot;autofocus&quot;&nbsp;/&gt;&nbsp;autofocus</pre>
+				<hr />
+				<h3>How to set a placeholder</h3>
+				<input type="text" name="entry2" id="entry2" placeholder="Enter Something" /> placeholder
+				<pre>&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;entry2&quot;&nbsp;id=&quot;entry2&quot;&nbsp;placeholder=&quot;Enter&nbsp;Something&quot;&nbsp;/&nbsp;&gt;&nbsp;placeholder</pre>
+				<hr />
+				<h3>How to set required for an entry</h3>
+				<input type="text" name="entry3" id="entry3" required="required" /> required
+				<pre>&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;entry3&quot;&nbsp;id=&quot;entry3&quot;&nbsp;required=&quot;required&quot;&nbsp;/&gt;&nbsp;required</pre>
+				<hr />
+				<h3>How to create a list/datalist</h3>
+				<input type="text" name="entry4" id="entry4" list="entry4list" /> list/datalist
+				<datalist id="entry4list">
+					<option value="Android">
+					<option value="iOS">
+					<option value="Symbian">
+					<option value="Windows Phone">
+					<option value="Ubuntu">
+				</datalist>
+				<pre>
+&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;entry4&quot;&nbsp;id=&quot;entry4&quot;&nbsp;list=&quot;entry4list&quot;&nbsp;/&gt;&nbsp;list/datalist
+&lt;datalist&nbsp;id=&quot;entry4list&quot;&gt;
+	&lt;option&nbsp;value=&quot;Android&quot;&gt;
+	&lt;option&nbsp;value=&quot;iOS&quot;&gt;
+	&lt;option&nbsp;value=&quot;Symbian&quot;&gt;
+	&lt;option&nbsp;value=&quot;Windows&nbsp;Phone&quot;&gt;
+	&lt;option&nbsp;value=&quot;Ubuntu&quot;&gt;
+&lt;/datalist&gt;
+				</pre>
+				<hr />
+				<h3>How to ensure a valid email address format</h3>
+				<input type="email" name="entry5" id="entry5" /> Email
+				<pre>&lt;input&nbsp;type=&quot;email&quot;&nbsp;name=&quot;entry5&quot;&nbsp;id=&quot;entry5&quot;&nbsp;/&gt;&nbsp;Email</pre>
+				<hr />
+				<h3>How to ensure a url format</h3>
+				<input type="url" name="entry6" id="entry6" /> URL
+				<pre>&lt;input&nbsp;type=&quot;url&quot;&nbsp;name=&quot;entry6&quot;&nbsp;id=&quot;entry6&quot;&nbsp;/&gt;&nbsp;URL</pre>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+				</form>
+			</div>
+			<div class="rightcontent">
+
+				<aside>
+					<script>
+						var dt = new Date(), mon = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
+						document.write("<p class='pCenter'>" + (dt.getDate() < 10 ? ("0" +  dt.getDate()) : dt.getDate()) + "-" + mon[dt.getMonth()] + "-" + dt.getFullYear() + "</p>");
+					</script>
+					<h3>HTML5 New attribute/value</h3>
+					<ul>
+						<li>autofocus="autofocus"</li>
+						<li>placeholder="Enter Something"</li>
+						<li>required="required"</li>
+						<li>list="entry4list"</li>
+						<li>type="email"</li>
+						<li>type="url"</li>
+					</ul>
+				</aside>
+			</div>
+			
+		</div>
+	</div>
+    <footer>
+      <section>
+       <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+        </script>
+      </section>
+      <br /><br />
+    </footer>
+</body>
+</html>

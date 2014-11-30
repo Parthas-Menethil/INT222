@@ -1,0 +1,3 @@
+Some contents from this folder do not belong to Parthas-Menthil. If you are the author of these contents and do not want them to be here. Please contact me at xywhpanda@gmail.com to remove these contents from my repo.
+
+All contents under this folder are not covered by the MIT License.
